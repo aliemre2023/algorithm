@@ -3,7 +3,8 @@
 // Question Link = https://leetcode.com/problems/design-skiplist/
 
 /*
-A skip list is a data structure that allows for efficient search, insertion and deletion of elements in a sorted list. It is a probabilistic data structure, meaning that its average time complexity is determined through a probabilistic analysis.
+A skip list is a data structure that allows for efficient search, insertion and deletion of elements in a sorted list. 
+It is a probabilistic data structure, meaning that its average time complexity is determined through a probabilistic analysis.
 
 In this question, we will design a doubly skiplist structure
 
@@ -25,12 +26,16 @@ class Skiplist {
 public: 
     DoublySkipList_Node* head;
 
-    // arraging default height,
+    // arranging default height, initial height
+    /*
+    Hint: If the height is 𝑘, then the search complexity should be 𝑂(𝑘𝑛^(1/𝑘))
+    [so the best choice is 𝑘=log(𝑛), giving logarithmic time].
+    */
     int height = 5;
     
     Skiplist() { // Time Complexity = O(height), Space Complexity = O(height)
-        // arraging the first and last nodes
-        // all the other nodes wll be inside these two columns
+        // arranging the first and last nodes
+        // all the other nodes will be inside these two columns
         int first = INT_MIN;
         int last = INT_MAX;
 
@@ -49,7 +54,7 @@ public:
         }
     }
 
-    // function will give a randon height between 1 and 20, because my initial height is 20
+    // function will give a random height between 1 and 5, because my initial height is 5
     int get_level(){
         int res = rand() % height + 1;
         return res;
