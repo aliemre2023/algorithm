@@ -1,3 +1,6 @@
+// https://www.geeksforgeeks.org/count-distinct-substrings-string-using-suffix-array/
+// https://leetcode.com/problems/distinct-subsequences-ii/description/
+
 //Brace your keyboard
 //inzva community built algoleague for every algorithm enthusiast hungry for self-improvement and friendly competition. Have fun and good luck!
 
